@@ -1,8 +1,13 @@
 <div>
-  <%= header %> <!-- renders the header component -->
-  <% titles.each do |title| %>
-    <div>
-      <%= title %> <!-- renders an individual course title -->
-    </div>
+  <% if header %> <!-- renders the header component -->
+    <%= header %>
+  <% end %>
+  
+  <% if titles.any? %>
+    <% titles.each do |title| %>
+      <div>
+        <%= title %> <!-- renders an individual course title -->
+      </div>
+    <% end %>
   <% end %>
 </div>
