@@ -1,0 +1,14 @@
+<!--
+<h1>Courses#index</h1>
+<p>Find me in app/views/courses/index.html.erb</p>
+
+<%= render(CourseComponent.with_collection(Course.all, notice: "Buy Me")) %> 
+-->
+
+<%= render ListComponent.new do |c| %>
+  <% c.header do %>
+  <%= link_to "List of Available Courses", root_path %>
+  <% end %>
+  <%= c.title(title: "First title") %>
+  <%= c.title(title: "Second title!") %>
+<% end %>
